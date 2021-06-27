@@ -57,6 +57,9 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   highScoreText: {fileID: 0}
   scoreTxt: {fileID: 0}
+  BonusScoreText: {fileID: 0}
+  HealthScoreText: {fileID: 0}
+  SpeedUpTimeText: {fileID: 0}
   PLAYER_BASE_SPEED: 100
   MIN_PLAYER_ROTATION: -45
   MAX_PLAYER_ROTATION: 45
