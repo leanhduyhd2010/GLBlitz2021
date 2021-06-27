@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public Slider healthSlider;
     public GameObject buttonArea;
     public TextMeshProUGUI scoreTxt;
+    public Text BonusScoreText;
+    public Canvas BonusCanvas;
 
     // Gameplay setup
     public float PLAYER_BASE_SPEED = 1f;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     private float obsSpawnTimeCount;
     private float bonusSpawnTimeCount;
     private float speedBonusTimeCount;
+    float timeToHideBonusScore = 0;
 
     private void Awake()
     {
@@ -93,12 +96,18 @@ public class GameManager : MonoBehaviour
                 speedBonusTimeCount = 0;
             }
 
+            if(Time.time >= timeToHideBonusScore)
+            {
+                BonusCanvas.gameObject.SetActive(false);
+            }
+
         }
         else
         {
             buttonArea.SetActive(true);
         }
-        
+
+
     }
 
     private void OnGUI()
@@ -113,6 +122,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void ShowBonusScore(int score)
+    {
+        string text = "+" + score;
+        BonusScoreText.text = text;
+        Character character = FindObjectOfType<Character>();
+        Vector3 charPos = character.gameObject.transform.position;
+        BonusCanvas.gameObject.transform.position = new Vector3(charPos.x, charPos.y + 1.0f, charPos.z);
+        BonusCanvas.gameObject.SetActive(true);
+        timeToHideBonusScore = Time.time + 1.0f;
+    }
 
     public float GetHealth() { return playerHealth; }
     public void SetHealth(float health) { playerHealth = health; }
