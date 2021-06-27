@@ -6,6 +6,8 @@ public class Character : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector3 direction = Vector3.right;
+    [SerializeReference]
+    CharacterController2D charr;
 
     float speed;
 
@@ -20,14 +22,15 @@ public class Character : MonoBehaviour
     {
         if (GameManager.instance.GetHealth() <= 0) { return; }
         //transform.Translate(direction * SPEED * Time.deltaTime);   
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        //rb.velocity = new Vector2(speed, rb.velocity.y);
+        charr.Move(speed * Time.deltaTime, false, false);
 
-        if (transform.eulerAngles.z < GameManager.instance.MIN_PLAYER_ROTATION)
+        /*if (transform.eulerAngles.z < GameManager.instance.MIN_PLAYER_ROTATION)
             transform.eulerAngles = new Vector3(0, 0, GameManager.instance.MIN_PLAYER_ROTATION);
 
         if (transform.eulerAngles.z > GameManager.instance.MAX_PLAYER_ROTATION)
             transform.eulerAngles = new Vector3(0, 0, GameManager.instance.MAX_PLAYER_ROTATION);
-
+        */
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -35,25 +38,25 @@ public class Character : MonoBehaviour
             if (touchPos.x > 0)
             {
                 speed = GameManager.instance.GetPlayerSpeed();
-                transform.localScale = new Vector3(1, 1, 1);
+                //transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {
                 speed = -GameManager.instance.GetPlayerSpeed();
-                transform.localScale = new Vector3(-1, 1, 1);
+                //transform.localScale = new Vector3(-1, 1, 1);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             speed = -GameManager.instance.GetPlayerSpeed();
-            transform.localScale = new Vector3(-1, 1, 1);
+            //transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             speed = GameManager.instance.GetPlayerSpeed();
-            transform.localScale = new Vector3(1, 1, 1);
+            //transform.localScale = new Vector3(1, 1, 1);
         }
 
 

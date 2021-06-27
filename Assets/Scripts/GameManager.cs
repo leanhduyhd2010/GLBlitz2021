@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] bonus;
     public Slider healthSlider;
     public GameObject buttonArea;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI scoreTxt;
 
     // Gameplay setup
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     private float playerSpeed;
     private int score;
+    private int high_score;
     private float playerHealth;
     private float maxY;
     private float maxX;
@@ -52,7 +55,8 @@ public class GameManager : MonoBehaviour
         else Destroy(instance);
 
         bonusSpawnTimeCount = Random.Range(MIN_TIME_TO_SPAWN_BONUS, MAX_TIME_TO_SPAWN_BONUS);
-        score = 0;
+        high_score = PlayerPrefs.GetInt("game_max_score",0);
+
         speedBonusTimeCount = 0;
         obsSpawnTime = MAX_TIME_TO_SPAWN_OBSTACLE;
         obsSpawnTimeCount = MAX_TIME_TO_SPAWN_OBSTACLE;
@@ -107,7 +111,16 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (score > high_score)
+            {
+                high_score = score;
+                PlayerPrefs.SetInt("game_max_score", score);
+            }
+            
+
             buttonArea.SetActive(true);
+            scoreText.text = "Score: " + score;
+            highScoreText.text = "HighScore: " + high_score;
         }
         
     }

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4091379037612458981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4091379037612458980}
+  - component: {fileID: 4091379037612458979}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4091379037612458980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091379037612458981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4091379037612458979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091379037612458981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7373f0499db07ae449398c81cea160a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 7736209989504243731, guid: f2ecf66825d63b341a18e22cb4242548, type: 3}
+  - {fileID: 698954329701756961, guid: bbb0b1c3044cfc5419db7fc38b9c833a, type: 3}
+  - {fileID: 3382647937888213797, guid: 27b4197a8aa88964ba96483dc226b132, type: 3}
+  - {fileID: 341935629484957233, guid: 0661f279218ad574985b96dcb5b16130, type: 3}
+  bonus:
+  - {fileID: 7115618902344867749, guid: fa2d81cb38580c6459865d309e35bf0f, type: 3}
+  - {fileID: 4559124602341931011, guid: 76194b15e5a6c384091642d12022583f, type: 3}
+  - {fileID: 2150713507977731920, guid: 68db836a4560d424e888804b43f90449, type: 3}
+  healthSlider: {fileID: 0}
+  buttonArea: {fileID: 0}
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  scoreTxt: {fileID: 0}
+  PLAYER_BASE_SPEED: 100
+  MIN_PLAYER_ROTATION: -45
+  MAX_PLAYER_ROTATION: 45
+  BONUS_SCORE: 5
+  BONUS_HEALTH: 10
+  SPEED_BONUS_MULTIPLIER: 2
+  SPEED_BONUS_TIME: 5
+  MIN_TIME_TO_SPAWN_OBSTACLE: 0.2
+  MAX_TIME_TO_SPAWN_OBSTACLE: 1
+  MIN_TIME_TO_SPAWN_BONUS: 5
+  MAX_TIME_TO_SPAWN_BONUS: 10
+  PLAYER_MAX_HEALTH: 100
