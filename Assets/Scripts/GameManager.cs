@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject buttonArea;
     public TextMeshProUGUI scoreTxt;
     public Text BonusScoreText;
-    public Canvas BonusCanvas;
+    public Text HealthScoreText;
+    public Text SpeedUpTimeText;
 
     // Gameplay setup
     public float PLAYER_BASE_SPEED = 1f;
@@ -44,7 +45,9 @@ public class GameManager : MonoBehaviour
     private float obsSpawnTimeCount;
     private float bonusSpawnTimeCount;
     private float speedBonusTimeCount;
-    float timeToHideBonusScore = 0;
+    float timeToHideScoreEffect = 0;
+    float timeToHideHealthEffect = 0;
+    float timeToHideSpeedupEffect = 0;
 
     private void Awake()
     {
@@ -107,11 +110,18 @@ public class GameManager : MonoBehaviour
                 speedBonusTimeCount = 0;
             }
 
-            if(Time.time >= timeToHideBonusScore)
+            if(Time.time >= timeToHideScoreEffect)
             {
-                BonusCanvas.gameObject.SetActive(false);
+                BonusScoreText.gameObject.SetActive(false);
             }
-
+            if (Time.time >= timeToHideHealthEffect)
+            {
+                HealthScoreText.gameObject.SetActive(false);
+            }
+            if (Time.time >= timeToHideSpeedupEffect)
+            {
+                SpeedUpTimeText.gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -135,13 +145,35 @@ public class GameManager : MonoBehaviour
 
     public void ShowBonusScore(int score)
     {
-        string text = "+" + score;
+        string text = "+" + score + " point";
         BonusScoreText.text = text;
         Character character = FindObjectOfType<Character>();
         Vector3 charPos = character.gameObject.transform.position;
-        BonusCanvas.gameObject.transform.position = new Vector3(charPos.x, charPos.y + 1.0f, charPos.z);
-        BonusCanvas.gameObject.SetActive(true);
-        timeToHideBonusScore = Time.time + 1.0f;
+        BonusScoreText.gameObject.transform.position = new Vector3(charPos.x, charPos.y + 1.0f, charPos.z);
+        BonusScoreText.gameObject.SetActive(true);
+        timeToHideScoreEffect = Time.time + 1.0f;
+    }
+
+    public void ShowHealthBonus(float health)
+    {
+        string text = "+" + health + " HP";
+        HealthScoreText.text = text;
+        Character character = FindObjectOfType<Character>();
+        Vector3 charPos = character.gameObject.transform.position;
+        HealthScoreText.gameObject.transform.position = new Vector3(charPos.x, charPos.y + 1.0f, charPos.z);
+        HealthScoreText.gameObject.SetActive(true);
+        timeToHideHealthEffect = Time.time + 1.0f;
+    }
+
+    public void ShowSpeedUpTimeBonus(float time)
+    {
+        string text = "+" + time + "s Speed up";
+        SpeedUpTimeText.text = text;
+        Character character = FindObjectOfType<Character>();
+        Vector3 charPos = character.gameObject.transform.position;
+        SpeedUpTimeText.gameObject.transform.position = new Vector3(charPos.x, charPos.y + 1.0f, charPos.z);
+        SpeedUpTimeText.gameObject.SetActive(true);
+        timeToHideSpeedupEffect = Time.time + 1.0f;
     }
 
     public float GetHealth() { return playerHealth; }
