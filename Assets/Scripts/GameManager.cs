@@ -72,7 +72,15 @@ public class GameManager : MonoBehaviour
                 obsSpawnTimeCount = obsSpawnTime;
                 ++score;
             }
-            obsSpawnTime -= Time.deltaTime / 100;
+            if (obsSpawnTime > MIN_TIME_TO_SPAWN_OBSTACLE)
+            {
+                obsSpawnTime -= Time.deltaTime / 100;
+            }
+            else
+            {
+                obsSpawnTime = MIN_TIME_TO_SPAWN_OBSTACLE;
+            }
+            
 
             // bonus spawn
             bonusSpawnTimeCount -= Time.deltaTime;
