@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ExtraScore : Bonus
 {
-    public int SCORE_BONUS = 5;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameManager.instance.SetScore(GameManager.instance.GetScore() + SCORE_BONUS);
-        GameManager.instance.ShowBonusScore(SCORE_BONUS);
+        GameManager.instance.SetScore(GameManager.instance.GetScore() + GameManager.instance.BONUS_SCORE);
+        GameManager.instance.ShowBonusScore(GameManager.instance.BONUS_SCORE);
         Destroy(gameObject);
     }
 }

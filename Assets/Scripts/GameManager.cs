@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
 
     // Gameplay setup
     public float PLAYER_BASE_SPEED = 1f;
+    public float MIN_PLAYER_ROTATION = -45;
+    public float MAX_PLAYER_ROTATION = 45;
 
     public int BONUS_SCORE = 5;
+    public float BONUS_HEALTH = 10f;
     public float SPEED_BONUS_MULTIPLIER = 2;
     public float SPEED_BONUS_TIME = 5f;
 
@@ -74,7 +77,15 @@ public class GameManager : MonoBehaviour
                 obsSpawnTimeCount = obsSpawnTime;
                 ++score;
             }
-            obsSpawnTime -= Time.deltaTime / 100;
+            if (obsSpawnTime > MIN_TIME_TO_SPAWN_OBSTACLE)
+            {
+                obsSpawnTime -= Time.deltaTime / 100;
+            }
+            else
+            {
+                obsSpawnTime = MIN_TIME_TO_SPAWN_OBSTACLE;
+            }
+            
 
             // bonus spawn
             bonusSpawnTimeCount -= Time.deltaTime;
