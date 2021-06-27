@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExtraScore : Bonus
+public class HealthBonus : Bonus
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameManager.instance.SetScore(GameManager.instance.GetScore() + GameManager.instance.BONUS_SCORE);
+        GameManager.instance.SetHealth(GameManager.instance.GetHealth() + GameManager.instance.BONUS_HEALTH);
         Destroy(gameObject);
     }
 }
