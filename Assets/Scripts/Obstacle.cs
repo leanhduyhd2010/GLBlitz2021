@@ -6,6 +6,10 @@ public class Obstacle : MonoBehaviour
 {
     Collider2D cl;
     public float DAMAGE = 20f;
+    public float durationLifeTime = 1f;
+
+    private float countingTime;
+    private bool isCollision = false;
 
     private void Awake()
     {
@@ -14,11 +18,26 @@ public class Obstacle : MonoBehaviour
         {
             Debug.Log("No collider found");
         }
+        isCollision = false;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (isCollision)
+        {
+            countingTime += Time.deltaTime;
+            var textureColor = gameObject.GetComponent<Renderer>().material.color;
+            float a = (durationLifeTime - countingTime) / durationLifeTime ;
+            if (a > 0)
+            {
+                textureColor.a = a;
+                gameObject.GetComponent<Renderer>().material.color = textureColor;
+            }
+            else
+            { 
+                Destroy(gameObject); 
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +48,8 @@ public class Obstacle : MonoBehaviour
             Handheld.Vibrate();
             GameManager.instance.SetHealth(GameManager.instance.GetHealth() - DAMAGE);
         }
-        
+        countingTime = 0f;
+        isCollision = true;
     }
 
     private void OnBecameInvisible()
