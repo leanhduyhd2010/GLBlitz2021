@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     // Gameplay setup
     public float PLAYER_BASE_SPEED = 1f;
+    public float MIN_PLAYER_ROTATION = -45;
+    public float MAX_PLAYER_ROTATION = 45;
 
     public int BONUS_SCORE = 5;
     public float BONUS_HEALTH = 10f;

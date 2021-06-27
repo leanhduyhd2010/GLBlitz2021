@@ -22,6 +22,12 @@ public class Character : MonoBehaviour
         //transform.Translate(direction * SPEED * Time.deltaTime);   
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
+        if (transform.eulerAngles.z < GameManager.instance.MIN_PLAYER_ROTATION)
+            transform.eulerAngles = new Vector3(0, 0, GameManager.instance.MIN_PLAYER_ROTATION);
+
+        if (transform.eulerAngles.z > GameManager.instance.MAX_PLAYER_ROTATION)
+            transform.eulerAngles = new Vector3(0, 0, GameManager.instance.MAX_PLAYER_ROTATION);
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
