@@ -27,15 +27,15 @@ public class Obstacle : MonoBehaviour
         {
             countingTime += Time.deltaTime;
             var textureColor = gameObject.GetComponent<Renderer>().material.color;
-            float a = (durationLifeTime - countingTime) / durationLifeTime ;
+            float a = (durationLifeTime - countingTime) / durationLifeTime;
             if (a > 0)
             {
                 textureColor.a = a;
                 gameObject.GetComponent<Renderer>().material.color = textureColor;
             }
             else
-            { 
-                Destroy(gameObject); 
+            {
+                Destroy(gameObject);
             }
         }
     }
@@ -47,9 +47,17 @@ public class Obstacle : MonoBehaviour
         {
             Handheld.Vibrate();
             GameManager.instance.SetHealth(GameManager.instance.GetHealth() - DAMAGE);
+            countingTime = 0f;
+            isCollision = true;
+
         }
-        countingTime = 0f;
-        isCollision = true;
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            countingTime = 0f;
+            isCollision = true;
+        }
+
+
     }
 
     private void OnBecameInvisible()
