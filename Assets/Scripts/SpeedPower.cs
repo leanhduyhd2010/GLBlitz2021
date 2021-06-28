@@ -8,6 +8,7 @@ public class SpeedPower : Bonus
     {
         GameManager.instance.SetSpeedBonusTime(GameManager.instance.GetSpeedBonusTime() + GameManager.instance.SPEED_BONUS_TIME);
         GameManager.instance.ShowSpeedUpTimeBonus(GameManager.instance.SPEED_BONUS_TIME);
+        SoundManager.instance.PlayOnGetSpeedBoostSound();
         Destroy(gameObject);
     }
 }

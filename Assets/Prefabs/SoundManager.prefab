@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4738345674142673311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4738345674142673296}
+  - component: {fileID: 4738345674142673297}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4738345674142673296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738345674142673311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4738345674142673297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738345674142673311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6e213ef60afe34bb691c524cd37e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterDeathBackground: {fileID: 8300000, guid: 3a88ae598476ec748a0b6924398a2aad, type: 3}
+  earlyLevelBackground: {fileID: 8300000, guid: b12ac290eb2b6264e92529012208c670, type: 3}
+  laterLevelBackground: {fileID: 8300000, guid: fc351253d142cfe4b97b6e45f63c67be, type: 3}
+  levelUp: {fileID: 8300000, guid: 37e2e5d6b0a1a024da85e2977317099c, type: 3}
+  maceOnPlatform: {fileID: 8300000, guid: 390edbf83adc3af489a1127baafcfaea, type: 3}
+  maceOnPlayer: {fileID: 8300000, guid: 33caba03e16363b42a6b077c67336102, type: 3}
+  sawOnPlatform: {fileID: 8300000, guid: 86da20dd786f7944398810478d7721ff, type: 3}
+  sawOnPlayer: {fileID: 8300000, guid: f6bc510ebccfdd04fa46460fcb1a177b, type: 3}
+  spikeOnPlatform: {fileID: 8300000, guid: a7e55ad48a751ff40b01e85dd0606d83, type: 3}
+  spikeOnPlayer: {fileID: 8300000, guid: ca8cfe889a306e74681f98d6f2fcfcbb, type: 3}
+  squareMaceOnPlatform: {fileID: 8300000, guid: 1c5c60fc1ad36f543bf6823280baca32, type: 3}
+  squareMaceOnPlayer: {fileID: 8300000, guid: 20552058d2a103f428e60ce800bc5607, type: 3}
+  playerOnScoreBonus: {fileID: 8300000, guid: 2f95cb2f9472bda479ad7afeb48fab8b, type: 3}
+  playerOnHealthBonus: {fileID: 8300000, guid: 5aca5ac3320c49d42809572cc2562513, type: 3}
+  playerOnHit: {fileID: 8300000, guid: 908ea8f7482ba0645aae0da2f1d26c61, type: 3}
+  playerFalling: {fileID: 8300000, guid: 6a4130f32e53d7042a9567eca90156c4, type: 3}
+  healthBonusOnPlayer: {fileID: 8300000, guid: 95e04a3d7b639b14fb73e1c05e03e24a, type: 3}
+  scoreBonusOnPlayer: {fileID: 8300000, guid: 22d511a311e16b34f85734007d62ff6b, type: 3}
+  speedBoostOnPlayer: {fileID: 8300000, guid: d64784ae22fe3e543ad7c7daa415a957, type: 3}

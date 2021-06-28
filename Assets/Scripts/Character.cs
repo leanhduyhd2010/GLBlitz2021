@@ -46,11 +46,8 @@ public class Character : MonoBehaviour
         if(collision.gameObject.CompareTag("Die"))
         {
             GameManager.instance.SetHealth(0);
+            SoundManager.instance.PlayPlayerFallingSound();
         }
     }
 
-
-    private void OnBecameInvisible()
-    {
-    }
 }

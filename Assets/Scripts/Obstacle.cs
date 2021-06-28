@@ -50,12 +50,44 @@ public class Obstacle : MonoBehaviour
             GameManager.instance.SetHealth(GameManager.instance.GetHealth() - DAMAGE);
             countingTime = 0f;
             isCollision = true;
-
+            SoundManager.instance.PlayPlayerOnHitSound();
+            if (gameObject.name.Contains("MaceCircle"))
+            {
+                SoundManager.instance.PlayMaceOnPlayerSound();
+            } 
+            else if (gameObject.name.Contains("MaceSquare"))
+            {
+                SoundManager.instance.PlaySquareMaceOnPlayerSound();
+            }
+            else if (gameObject.name.Contains("Saw"))
+            {
+                SoundManager.instance.PlaySawOnPlayerSound();
+            }
+            else if (gameObject.name.Contains("Spike"))
+            {
+                SoundManager.instance.PlaySpikeOnPlayerSound();
+            }
         }
         if (collision.gameObject.CompareTag("Platform"))
         {
             countingTime = 0f;
             isCollision = true;
+            if (gameObject.name.Contains("MaceCircle"))
+            {
+                SoundManager.instance.PlayMaceOnPlatformSound();
+            }
+            else if (gameObject.name.Contains("MaceSquare"))
+            {
+                SoundManager.instance.PlaySquareMaceOnPlatformSound();
+            }
+            else if (gameObject.name.Contains("Saw"))
+            {
+                SoundManager.instance.PlaySawOnPlatformSound();
+            }
+            else if (gameObject.name.Contains("Spike"))
+            {
+                SoundManager.instance.PlaySpikeOnPlatformSound();
+            }
         }
 
 
@@ -63,6 +95,8 @@ public class Obstacle : MonoBehaviour
 
     private void OnBecameInvisible()
     {
+        if (!isCollision) // if obs doesn't fall in player or platform, then also decrease the number of obs
+            GameManager.instance.DecreaseNumberOfObstacle();
         Destroy(gameObject);
     }
 }

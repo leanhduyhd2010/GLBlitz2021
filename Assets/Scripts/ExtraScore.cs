@@ -8,6 +8,7 @@ public class ExtraScore : Bonus
     {
         GameManager.instance.SetScore(GameManager.instance.GetScore() + GameManager.instance.BONUS_SCORE);
         GameManager.instance.ShowBonusScore(GameManager.instance.BONUS_SCORE);
+        SoundManager.instance.PlayOnGetScoreBonusSound();
         Destroy(gameObject);
     }
 }

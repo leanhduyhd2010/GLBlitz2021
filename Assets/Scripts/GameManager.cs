@@ -109,11 +109,17 @@ public class GameManager : MonoBehaviour
 
         if (Instruction.activeSelf)
             return;
-        isStart = true;
-        CalculateDifficulty();
+        
 
         if (playerHealth > 0)
         {
+            isStart = true;
+            timeInGame += Time.deltaTime;
+            CalculateDifficulty();
+
+            if (profile.difficultyLevel < 3)
+                SoundManager.instance.PlayEarlyLevelBackgroundSound();
+            else SoundManager.instance.PlayLaterLevelBackgroundSound();
             // obstacle spawn
             obsSpawnTimeCount -= Time.deltaTime;
             if (obsSpawnTimeCount < 0 && numberOfObstacle <= profile.maxObstacle)
@@ -146,6 +152,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.PlayAfterDeathBackgroundSound();
             if (score > high_score)
             {
                 high_score = score;
@@ -240,12 +247,18 @@ public class GameManager : MonoBehaviour
     }
     public void CalculateDifficulty()
     {
-        timeInGame += Time.deltaTime;
-
-        for (int i = 0; i < DIFFICULTY_PROFILE.Length; i++)
+        for (int i = profile.difficultyLevel - 1; i < DIFFICULTY_PROFILE.Length; i++)
         {
             if (timeInGame > DIFFICULTY_PROFILE[i].reachTime)
-                profile = DIFFICULTY_PROFILE[i];
+            {
+                if (profile.difficultyLevel != DIFFICULTY_PROFILE[i].difficultyLevel)
+                {
+                    profile = DIFFICULTY_PROFILE[i];
+                    //SoundManager.instance.PlayLevelUpSound();
+                    break;
+                }
+                
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ public class HealthBonus : Bonus
     {
         GameManager.instance.SetHealth(GameManager.instance.GetHealth() + GameManager.instance.BONUS_HEALTH);
         GameManager.instance.ShowHealthBonus(GameManager.instance.BONUS_HEALTH);
+        SoundManager.instance.PlayOnGetHealthBonusSound();
         Destroy(gameObject);
     }
 }
