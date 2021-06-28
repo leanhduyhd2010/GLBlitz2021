@@ -1766,10 +1766,6 @@ PrefabInstance:
       propertyPath: SpeedUpTimeText
       value: 
       objectReference: {fileID: 5516380533503746230}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: PLAYER_BASE_SPEED
-      value: 75
-      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458980, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: m_RootOrder
       value: 0

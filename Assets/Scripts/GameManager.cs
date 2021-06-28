@@ -208,9 +208,10 @@ public class GameManager : MonoBehaviour
         else
             return new Vector3(0, 0, 0);
     }
-
+    
     public float GetHealth() { return playerHealth; }
     public void SetHealth(float health) { playerHealth = health; }
+    public float GetPlayerMaxHealth() { return PLAYER_MAX_HEALTH; }
     public int GetScore() { return score; }
     public void SetScore(int _score) { score = _score; }
     public float GetObstacleSpawnTime() { return profile.obsSpawnTimeMin; }
