@@ -149,18 +149,6 @@ public class GameManager : MonoBehaviour
                 speedBonusTimeCount = 0;
             }
 
-            if (Time.time >= timeToHideScoreEffect)
-            {
-                BonusScoreText.gameObject.SetActive(false);
-            }
-            if (Time.time >= timeToHideHealthEffect)
-            {
-                HealthScoreText.gameObject.SetActive(false);
-            }
-            if (Time.time >= timeToHideSpeedupEffect)
-            {
-                SpeedUpTimeText.gameObject.SetActive(false);
-            }
         }
         else
         {
@@ -175,6 +163,18 @@ public class GameManager : MonoBehaviour
             highScoreText.text = "HighScore: " + high_score;
         }
 
+        if (Time.time >= timeToHideScoreEffect)
+        {
+            BonusScoreText.gameObject.SetActive(false);
+        }
+        if (Time.time >= timeToHideHealthEffect)
+        {
+            HealthScoreText.gameObject.SetActive(false);
+        }
+        if (Time.time >= timeToHideSpeedupEffect)
+        {
+            SpeedUpTimeText.gameObject.SetActive(false);
+        }
 
     }
 
