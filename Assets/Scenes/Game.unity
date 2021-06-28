@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 10
+  FALLING_SPEED: 1
 --- !u!212 &9550436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 5
+  FALLING_SPEED: 0.7
 --- !u!212 &247486756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 15
+  FALLING_SPEED: 1.5
 --- !u!114 &582722307 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8272771942762246379, guid: a8414b746b89e9646954697b4b8362fd, type: 3}
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 5
+  FALLING_SPEED: 0.7
 --- !u!1 &1493912583
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 15
+  FALLING_SPEED: 1.5
 --- !u!212 &1493912586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb42528ee15adc479039efba730a19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FALLING_SPEED: 10
+  FALLING_SPEED: 1
 --- !u!1 &1903150046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,10 +1265,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 403619765}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: BONUS_HEALTH
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 582722307}
@@ -1288,318 +1284,6 @@ PrefabInstance:
       propertyPath: SpeedUpTimeText
       value: 
       objectReference: {fileID: 5516380533503746230}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: SPEED_BONUS_TIME
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: PLAYER_BASE_SPEED
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: SPEED_BONUS_MULTIPLIER
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].name
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].name
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].name
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].name
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].name
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].name
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].name
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].name
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].name
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].reachTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].reachTime
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].reachTime
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].reachTime
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].reachTime
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].reachTime
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].reachTime
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].reachTime
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].reachTime
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].maxObstacle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].maxObstacle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].maxObstacle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].maxObstacle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].maxObstacle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].maxObstacle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].maxObstacle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].maxObstacle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].maxObstacle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obstacleScore
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obstacleScore
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obstacleScore
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obstacleScore
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obstacleScore
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obstacleScore
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obstacleScore
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obstacleScore
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obstacleScore
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obsSpawnTimeMax
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obsSpawnTimeMin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obsSpawnTimeMax
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obsSpawnTimeMin
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obsSpawnTimeMax
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obsSpawnTimeMin
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obsSpawnTimeMax
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obsSpawnTimeMin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obsSpawnTimeMax
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obsSpawnTimeMin
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obsSpawnTimeMax
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obsSpawnTimeMin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obsSpawnTimeMax
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obsSpawnTimeMin
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obsSpawnTimeMax
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obsSpawnTimeMin
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obsSpawnTimeMax
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obsSpawnTimeMin
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMin
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMin
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].bonusSpawnTimeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[2].bonusSpawnTimeMin
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].bonusSpawnTimeMax
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[3].bonusSpawnTimeMin
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].bonusSpawnTimeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[4].bonusSpawnTimeMin
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].bonusSpawnTimeMax
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[5].bonusSpawnTimeMin
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].bonusSpawnTimeMax
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[6].bonusSpawnTimeMin
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].bonusSpawnTimeMax
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[7].bonusSpawnTimeMin
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].bonusSpawnTimeMax
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[8].bonusSpawnTimeMin
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].bonusSpawnTimeMax
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
-      propertyPath: DIFFICULTY_PROFILE.Array.data[9].bonusSpawnTimeMin
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458980, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: m_RootOrder
       value: 0

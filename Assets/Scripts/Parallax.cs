@@ -16,7 +16,7 @@ public class Parallax : MonoBehaviour
     private void FixedUpdate()
     {
         if (GameManager.instance.GetHealth() <= 0) { return; }
-        transform.Translate(Vector3.left * FALLING_SPEED * (1 - GameManager.instance.GetObstacleSpawnTime()) * Time.deltaTime);
+        transform.Translate(Vector3.left * FALLING_SPEED * GameManager.instance.GetProfile().difficultyLevel * Time.deltaTime);
 
         if (transform.position.y + length < -GameManager.instance.GetWorldScreenSizeY())
         {

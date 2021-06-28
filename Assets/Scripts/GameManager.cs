@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public struct Profile
     {
         public string name;
+        public int difficultyLevel;
         public int reachTime;
         public int maxObstacle;
         public int obstacleScore;
@@ -215,6 +216,7 @@ public class GameManager : MonoBehaviour
     public void SetSpeedBonusTime(float time) { speedBonusTimeCount = time; }
     public float GetPlayerSpeed() { return playerSpeed; }
     public void SetPlayerSpeed(float speed) { playerSpeed = speed; }
+    public Profile GetProfile() { return profile; }
     private void SpawnRandomObstacle()
     {
         float spawnPosY = maxY + 1f;

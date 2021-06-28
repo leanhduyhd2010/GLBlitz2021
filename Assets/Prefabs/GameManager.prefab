@@ -69,6 +69,7 @@ MonoBehaviour:
   PLAYER_MAX_HEALTH: 100
   DIFFICULTY_PROFILE:
   - name: default
+    difficultyLevel: 1
     reachTime: 0
     maxObstacle: 1
     obstacleScore: 5
@@ -77,6 +78,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
   - name: 1
+    difficultyLevel: 2
     reachTime: 5
     maxObstacle: 1
     obstacleScore: 5
@@ -85,6 +87,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
   - name: 2
+    difficultyLevel: 3
     reachTime: 20
     maxObstacle: 1
     obstacleScore: 5
@@ -93,6 +96,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
   - name: 3
+    difficultyLevel: 4
     reachTime: 30
     maxObstacle: 2
     obstacleScore: 10
@@ -101,6 +105,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 2
     bonusSpawnTimeMax: 4
   - name: 4
+    difficultyLevel: 5
     reachTime: 40
     maxObstacle: 2
     obstacleScore: 10
@@ -109,6 +114,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
   - name: 5
+    difficultyLevel: 6
     reachTime: 50
     maxObstacle: 2
     obstacleScore: 10
@@ -117,6 +123,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 6
+    difficultyLevel: 7
     reachTime: 60
     maxObstacle: 3
     obstacleScore: 15
@@ -125,6 +132,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 1.5
     bonusSpawnTimeMax: 3
   - name: 7
+    difficultyLevel: 8
     reachTime: 70
     maxObstacle: 3
     obstacleScore: 15
@@ -133,6 +141,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 8
+    difficultyLevel: 9
     reachTime: 90
     maxObstacle: 3
     obstacleScore: 15
@@ -141,6 +150,7 @@ MonoBehaviour:
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 9
+    difficultyLevel: 10
     reachTime: 120
     maxObstacle: 3
     obstacleScore: 15
