@@ -697,17 +697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &861028397 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5516380534320439455, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
-  m_PrefabInstance: {fileID: 5516380533503746226}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &864320867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -928,17 +917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FALLING_SPEED: 5
---- !u!114 &1412377455 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5516380532766788573, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
-  m_PrefabInstance: {fileID: 5516380533503746226}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1493912583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,17 +1023,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1697833996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5516380533018068158, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
-  m_PrefabInstance: {fileID: 5516380533503746226}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1727686696
@@ -1276,15 +1243,15 @@ PrefabInstance:
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: BonusScoreText
       value: 
-      objectReference: {fileID: 1697833996}
+      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: HealthScoreText
       value: 
-      objectReference: {fileID: 1412377455}
+      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: SpeedUpTimeText
       value: 
-      objectReference: {fileID: 861028397}
+      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: SPEED_BONUS_TIME
       value: 3
@@ -1299,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.size
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].name
@@ -1330,6 +1297,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].name
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].name
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].reachTime
       value: 5
       objectReference: {fileID: 0}
@@ -1356,6 +1331,14 @@ PrefabInstance:
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[7].reachTime
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].reachTime
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].reachTime
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].maxObstacle
@@ -1386,6 +1369,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].maxObstacle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].maxObstacle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].obstacleScore
       value: 5
       objectReference: {fileID: 0}
@@ -1411,6 +1402,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[7].obstacleScore
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obstacleScore
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obstacleScore
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
@@ -1468,6 +1467,22 @@ PrefabInstance:
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[7].obsSpawnTimeMin
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obsSpawnTimeMax
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].obsSpawnTimeMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obsSpawnTimeMax
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].obsSpawnTimeMin
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMax
@@ -1532,6 +1547,22 @@ PrefabInstance:
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[7].bonusSpawnTimeMin
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].bonusSpawnTimeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[8].bonusSpawnTimeMin
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].bonusSpawnTimeMax
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[9].bonusSpawnTimeMin
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458980, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: m_RootOrder
