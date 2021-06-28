@@ -7,9 +7,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
 
     public AudioClip afterDeathBackground;
-    public AudioClip earlyLevelBackground;
-    public AudioClip laterLevelBackground;
-    public AudioClip levelUp;
+    public AudioClip playingBackground;
 
     public AudioClip maceOnPlatform;
     public AudioClip maceOnPlayer;
@@ -91,8 +89,6 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayPlayerFallingSound() { PlaySound(playerFalling); }
     public void PlayAfterDeathBackgroundSound() { PlayBackgroundSound(afterDeathBackground); }
-    public void PlayEarlyLevelBackgroundSound() { PlayBackgroundSound(earlyLevelBackground); }
-    public void PlayLaterLevelBackgroundSound() { PlayBackgroundSound(laterLevelBackground); }
-    public void PlayLevelUpSound() { PlaySound(levelUp); }
+    public void PlayPlayingBackgroundSound() { PlayBackgroundSound(playingBackground); }
     
 }

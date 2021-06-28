@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   afterDeathBackground: {fileID: 8300000, guid: 3a88ae598476ec748a0b6924398a2aad, type: 3}
-  earlyLevelBackground: {fileID: 8300000, guid: b12ac290eb2b6264e92529012208c670, type: 3}
-  laterLevelBackground: {fileID: 8300000, guid: fc351253d142cfe4b97b6e45f63c67be, type: 3}
-  levelUp: {fileID: 8300000, guid: 37e2e5d6b0a1a024da85e2977317099c, type: 3}
+  playingBackground: {fileID: 8300000, guid: fc351253d142cfe4b97b6e45f63c67be, type: 3}
   maceOnPlatform: {fileID: 8300000, guid: 390edbf83adc3af489a1127baafcfaea, type: 3}
   maceOnPlayer: {fileID: 8300000, guid: 33caba03e16363b42a6b077c67336102, type: 3}
   sawOnPlatform: {fileID: 8300000, guid: 86da20dd786f7944398810478d7721ff, type: 3}

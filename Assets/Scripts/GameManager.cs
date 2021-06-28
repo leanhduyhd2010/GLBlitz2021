@@ -117,9 +117,8 @@ public class GameManager : MonoBehaviour
             timeInGame += Time.deltaTime;
             CalculateDifficulty();
 
-            if (profile.difficultyLevel < 3)
-                SoundManager.instance.PlayEarlyLevelBackgroundSound();
-            else SoundManager.instance.PlayLaterLevelBackgroundSound();
+            SoundManager.instance.PlayPlayingBackgroundSound();
+
             // obstacle spawn
             obsSpawnTimeCount -= Time.deltaTime;
             if (obsSpawnTimeCount < 0 && numberOfObstacle <= profile.maxObstacle)
