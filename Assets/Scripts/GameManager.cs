@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] bonus;
     public Slider healthSlider;
     public GameObject buttonArea;
+    public GameObject Instruction;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI scoreTxt;
@@ -22,8 +23,8 @@ public class GameManager : MonoBehaviour
 
     // Gameplay setup
     public float PLAYER_BASE_SPEED = 1f;
-    public float MIN_PLAYER_ROTATION = -45;
-    public float MAX_PLAYER_ROTATION = 45;
+    //public float MIN_PLAYER_ROTATION = -45;
+    //public float MAX_PLAYER_ROTATION = 45;
 
     public int BONUS_SCORE = 5;
     public float BONUS_HEALTH = 10f;
@@ -36,6 +37,10 @@ public class GameManager : MonoBehaviour
     public float MAX_TIME_TO_SPAWN_BONUS = 25f;
 
     public float PLAYER_MAX_HEALTH = 100f;
+    public int TIME_DIFFICULTY_01 = 30;
+    public int TIME_DIFFICULTY_02 = 60;
+    public int TIME_DIFFICULTY_03 = 120;
+
     //////////////////////////
 
     private float playerSpeed;
@@ -51,8 +56,10 @@ public class GameManager : MonoBehaviour
     float timeToHideScoreEffect = 0;
     float timeToHideHealthEffect = 0;
     float timeToHideSpeedupEffect = 0;
-
-    private void Awake()
+    float timeInGame = 0;
+    int difficulty = 0;
+    bool isStart;
+    private void Start()
     {
         if (instance == null)
         {
@@ -61,8 +68,9 @@ public class GameManager : MonoBehaviour
         else Destroy(instance);
 
         bonusSpawnTimeCount = Random.Range(MIN_TIME_TO_SPAWN_BONUS, MAX_TIME_TO_SPAWN_BONUS);
-        high_score = PlayerPrefs.GetInt("game_max_score",0);
+        high_score = PlayerPrefs.GetInt("game_max_score", 0);
 
+        playerSpeed = PLAYER_BASE_SPEED;
         speedBonusTimeCount = 0;
         obsSpawnTime = MAX_TIME_TO_SPAWN_OBSTACLE;
         obsSpawnTimeCount = MAX_TIME_TO_SPAWN_OBSTACLE;
@@ -70,17 +78,44 @@ public class GameManager : MonoBehaviour
         healthSlider.maxValue = PLAYER_MAX_HEALTH;
         maxX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0)).x;
         maxY = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height)).y;
+        Instruction.SetActive(true);
+        isStart = false;
+        timeInGame = 0f;
+        difficulty = 1;
     }
 
     private void Update()
     {
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                Instruction.SetActive(false);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Instruction.SetActive(false);
+        }
+
+        if (Instruction.activeSelf)
+            return;
+        isStart = true;
+        CalculateDifficulty();
+
         if (playerHealth > 0)
-        {   
+        {
             // obstacle spawn
             obsSpawnTimeCount -= Time.deltaTime;
             if (obsSpawnTimeCount < 0)
             {
-                SpawnRandomObstacle();
+                for (int i = 0; i < difficulty; i++)
+                {
+                    SpawnRandomObstacle();
+                }
                 obsSpawnTimeCount = obsSpawnTime;
                 ++score;
             }
@@ -92,7 +127,7 @@ public class GameManager : MonoBehaviour
             {
                 obsSpawnTime = MIN_TIME_TO_SPAWN_OBSTACLE;
             }
-            
+
 
             // bonus spawn
             bonusSpawnTimeCount -= Time.deltaTime;
@@ -114,7 +149,7 @@ public class GameManager : MonoBehaviour
                 speedBonusTimeCount = 0;
             }
 
-            if(Time.time >= timeToHideScoreEffect)
+            if (Time.time >= timeToHideScoreEffect)
             {
                 BonusScoreText.gameObject.SetActive(false);
             }
@@ -134,7 +169,6 @@ public class GameManager : MonoBehaviour
                 high_score = score;
                 PlayerPrefs.SetInt("game_max_score", score);
             }
-            
 
             buttonArea.SetActive(true);
             scoreText.text = "Score: " + score;
@@ -214,5 +248,22 @@ public class GameManager : MonoBehaviour
         float spawnPosX = Random.Range(-maxX, maxX);
         int randomBonusIdx = Random.Range(0, bonus.Length);
         Instantiate(bonus[randomBonusIdx], new Vector3(spawnPosX, spawnPosY), Quaternion.identity);
+    }
+    public bool isGameStart()
+    {
+        return isStart;
+    }
+    public void CalculateDifficulty()
+    {
+        timeInGame += Time.deltaTime;
+
+        if (timeInGame > TIME_DIFFICULTY_01)
+            difficulty = 2;
+
+        if (timeInGame > TIME_DIFFICULTY_02)
+            difficulty = 3;
+
+        if (timeInGame > TIME_DIFFICULTY_03)
+            difficulty = 4;
     }
 }
