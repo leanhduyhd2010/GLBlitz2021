@@ -61,11 +61,11 @@ MonoBehaviour:
   BonusScoreText: {fileID: 0}
   HealthScoreText: {fileID: 0}
   SpeedUpTimeText: {fileID: 0}
-  PLAYER_BASE_SPEED: 100
+  PLAYER_BASE_SPEED: 75
   BONUS_SCORE: 5
-  BONUS_HEALTH: 10
-  SPEED_BONUS_MULTIPLIER: 2
-  SPEED_BONUS_TIME: 5
+  BONUS_HEALTH: 30
+  SPEED_BONUS_MULTIPLIER: 1.25
+  SPEED_BONUS_TIME: 3
   PLAYER_MAX_HEALTH: 100
   DIFFICULTY_PROFILE:
   - name: default
@@ -76,11 +76,75 @@ MonoBehaviour:
     obsSpawnTimeMax: 2
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
-  - name: hard
-    reachTime: 10
+  - name: 1
+    reachTime: 5
+    maxObstacle: 1
+    obstacleScore: 5
+    obsSpawnTimeMin: 1
+    obsSpawnTimeMax: 1.5
+    bonusSpawnTimeMin: 3
+    bonusSpawnTimeMax: 5
+  - name: 2
+    reachTime: 20
+    maxObstacle: 1
+    obstacleScore: 5
+    obsSpawnTimeMin: 0.3
+    obsSpawnTimeMax: 1
+    bonusSpawnTimeMin: 3
+    bonusSpawnTimeMax: 5
+  - name: 3
+    reachTime: 30
     maxObstacle: 2
     obstacleScore: 10
     obsSpawnTimeMin: 1.5
-    obsSpawnTimeMax: 2.5
-    bonusSpawnTimeMin: 4.5
-    bonusSpawnTimeMax: 6.1
+    obsSpawnTimeMax: 2
+    bonusSpawnTimeMin: 2
+    bonusSpawnTimeMax: 4
+  - name: 4
+    reachTime: 40
+    maxObstacle: 2
+    obstacleScore: 10
+    obsSpawnTimeMin: 1
+    obsSpawnTimeMax: 1.5
+    bonusSpawnTimeMin: 3
+    bonusSpawnTimeMax: 5
+  - name: 5
+    reachTime: 50
+    maxObstacle: 2
+    obstacleScore: 10
+    obsSpawnTimeMin: 0.5
+    obsSpawnTimeMax: 1
+    bonusSpawnTimeMin: 2.5
+    bonusSpawnTimeMax: 4
+  - name: 6
+    reachTime: 60
+    maxObstacle: 3
+    obstacleScore: 15
+    obsSpawnTimeMin: 1
+    obsSpawnTimeMax: 1.5
+    bonusSpawnTimeMin: 1.5
+    bonusSpawnTimeMax: 3
+  - name: 7
+    reachTime: 70
+    maxObstacle: 3
+    obstacleScore: 15
+    obsSpawnTimeMin: 0.5
+    obsSpawnTimeMax: 1
+    bonusSpawnTimeMin: 2.5
+    bonusSpawnTimeMax: 4
+  - name: 8
+    reachTime: 90
+    maxObstacle: 3
+    obstacleScore: 15
+    obsSpawnTimeMin: 0.5
+    obsSpawnTimeMax: 0.75
+    bonusSpawnTimeMin: 2.5
+    bonusSpawnTimeMax: 4
+  - name: 9
+    reachTime: 120
+    maxObstacle: 3
+    obstacleScore: 15
+    obsSpawnTimeMin: 0.25
+    obsSpawnTimeMax: 0.75
+    bonusSpawnTimeMin: 2
+    bonusSpawnTimeMax: 3.5
