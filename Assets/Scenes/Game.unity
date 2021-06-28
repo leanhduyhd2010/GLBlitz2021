@@ -1262,6 +1262,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 403619765}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: BONUS_HEALTH
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 582722307}
@@ -1282,8 +1286,188 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 861028397}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: SPEED_BONUS_TIME
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: PLAYER_BASE_SPEED
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: SPEED_BONUS_MULTIPLIER
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].name
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].name
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].name
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].name
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].name
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].name
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].name
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].reachTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].reachTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].reachTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].reachTime
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].reachTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].reachTime
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].reachTime
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].maxObstacle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].maxObstacle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].maxObstacle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].maxObstacle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].maxObstacle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].maxObstacle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].maxObstacle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obstacleScore
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obstacleScore
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obstacleScore
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obstacleScore
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obstacleScore
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obstacleScore
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obstacleScore
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obsSpawnTimeMax
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].obsSpawnTimeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obsSpawnTimeMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].obsSpawnTimeMin
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obsSpawnTimeMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].obsSpawnTimeMin
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obsSpawnTimeMax
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].obsSpawnTimeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obsSpawnTimeMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].obsSpawnTimeMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obsSpawnTimeMax
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].obsSpawnTimeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obsSpawnTimeMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].obsSpawnTimeMin
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMax
@@ -1295,11 +1479,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMax
-      value: 6.1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMin
-      value: 4.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].bonusSpawnTimeMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[2].bonusSpawnTimeMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].bonusSpawnTimeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[3].bonusSpawnTimeMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].bonusSpawnTimeMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[4].bonusSpawnTimeMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].bonusSpawnTimeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[5].bonusSpawnTimeMin
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].bonusSpawnTimeMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[6].bonusSpawnTimeMin
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].bonusSpawnTimeMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[7].bonusSpawnTimeMin
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458980, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: m_RootOrder
