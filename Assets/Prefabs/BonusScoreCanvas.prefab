@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5516380532766788572}
   - component: {fileID: 5516380532766788546}
   - component: {fileID: 5516380532766788573}
+  - component: {fileID: 5516380533503746231}
   m_Layer: 0
   m_Name: BosnusHealthText
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +25
+--- !u!114 &5516380533503746231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516380532766788575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1
 --- !u!1 &5516380533018068152
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 5516380533018068153}
   - component: {fileID: 5516380533018068159}
   - component: {fileID: 5516380533018068158}
+  - component: {fileID: 5516380533503746232}
   m_Layer: 0
   m_Name: BosnusScoreText
   m_TagString: Untagged
@@ -158,6 +173,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +25
+--- !u!114 &5516380533503746232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516380533018068152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1
 --- !u!1 &5516380533693740988
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +299,7 @@ GameObject:
   - component: {fileID: 5516380534320439454}
   - component: {fileID: 5516380534320439452}
   - component: {fileID: 5516380534320439455}
+  - component: {fileID: 5516380533503746230}
   m_Layer: 0
   m_Name: BosnusSpeedUpTimeText
   m_TagString: Untagged
@@ -339,3 +368,16 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +25
+--- !u!114 &5516380533503746230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516380534320439449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1

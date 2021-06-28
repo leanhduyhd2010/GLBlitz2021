@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8272771942338121491, guid: a8414b746b89e9646954697b4b8362fd, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 8272771942338121494, guid: a8414b746b89e9646954697b4b8362fd, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -1275,15 +1279,15 @@ PrefabInstance:
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: BonusScoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5516380533503746232}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: HealthScoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5516380533503746231}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: SpeedUpTimeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5516380533503746230}
     - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: SPEED_BONUS_TIME
       value: 3
@@ -1804,3 +1808,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
+--- !u!114 &5516380533503746230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5516380533503746230, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
+  m_PrefabInstance: {fileID: 5516380533503746226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5516380533503746231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5516380533503746231, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
+  m_PrefabInstance: {fileID: 5516380533503746226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5516380533503746232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5516380533503746232, guid: 6fdfa137c76010b4d8322b31652e45c2, type: 3}
+  m_PrefabInstance: {fileID: 5516380533503746226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1caff1688cf04f901ce2dc120ad70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
