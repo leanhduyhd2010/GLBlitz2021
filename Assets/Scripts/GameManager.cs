@@ -92,7 +92,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

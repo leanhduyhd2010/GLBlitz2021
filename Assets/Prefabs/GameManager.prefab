@@ -88,7 +88,7 @@ MonoBehaviour:
     bonusSpawnTimeMax: 5
   - name: 2
     difficultyLevel: 3
-    reachTime: 20
+    reachTime: 15
     maxObstacle: 1
     obstacleScore: 5
     obsSpawnTimeMin: 0.3
@@ -97,20 +97,20 @@ MonoBehaviour:
     bonusSpawnTimeMax: 5
   - name: 3
     difficultyLevel: 4
-    reachTime: 30
+    reachTime: 25
     maxObstacle: 2
     obstacleScore: 10
-    obsSpawnTimeMin: 1.5
-    obsSpawnTimeMax: 2
+    obsSpawnTimeMin: 0.3
+    obsSpawnTimeMax: 1
     bonusSpawnTimeMin: 2
     bonusSpawnTimeMax: 4
   - name: 4
     difficultyLevel: 5
-    reachTime: 40
+    reachTime: 35
     maxObstacle: 2
     obstacleScore: 10
-    obsSpawnTimeMin: 1
-    obsSpawnTimeMax: 1.5
+    obsSpawnTimeMin: 0.3
+    obsSpawnTimeMax: 0.5
     bonusSpawnTimeMin: 3
     bonusSpawnTimeMax: 5
   - name: 5
@@ -118,8 +118,8 @@ MonoBehaviour:
     reachTime: 50
     maxObstacle: 2
     obstacleScore: 10
-    obsSpawnTimeMin: 0.5
-    obsSpawnTimeMax: 1
+    obsSpawnTimeMin: 0.1
+    obsSpawnTimeMax: 0.5
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 6
@@ -127,8 +127,8 @@ MonoBehaviour:
     reachTime: 60
     maxObstacle: 3
     obstacleScore: 15
-    obsSpawnTimeMin: 1
-    obsSpawnTimeMax: 1.5
+    obsSpawnTimeMin: 0.1
+    obsSpawnTimeMax: 1
     bonusSpawnTimeMin: 1.5
     bonusSpawnTimeMax: 3
   - name: 7
@@ -136,8 +136,8 @@ MonoBehaviour:
     reachTime: 70
     maxObstacle: 3
     obstacleScore: 15
-    obsSpawnTimeMin: 0.5
-    obsSpawnTimeMax: 1
+    obsSpawnTimeMin: 0.1
+    obsSpawnTimeMax: 0.7
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 8
@@ -145,8 +145,8 @@ MonoBehaviour:
     reachTime: 90
     maxObstacle: 3
     obstacleScore: 15
-    obsSpawnTimeMin: 0.5
-    obsSpawnTimeMax: 0.75
+    obsSpawnTimeMin: 0.1
+    obsSpawnTimeMax: 0.5
     bonusSpawnTimeMin: 2.5
     bonusSpawnTimeMax: 4
   - name: 9
@@ -154,7 +154,7 @@ MonoBehaviour:
     reachTime: 120
     maxObstacle: 3
     obstacleScore: 15
-    obsSpawnTimeMin: 0.25
-    obsSpawnTimeMax: 0.75
-    bonusSpawnTimeMin: 2
-    bonusSpawnTimeMax: 3.5
+    obsSpawnTimeMin: 0.1
+    obsSpawnTimeMax: 0.3
+    bonusSpawnTimeMin: 3
+    bonusSpawnTimeMax: 5
