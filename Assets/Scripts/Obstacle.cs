@@ -43,6 +43,7 @@ public class Obstacle : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         cl.isTrigger = true;
+        GameManager.instance.DecreaseNumberOfObstacle();
         if (collision.gameObject.CompareTag("Player"))
         {
             Handheld.Vibrate();

@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     private float obsSpawnTimeCount;
     private float bonusSpawnTimeCount;
     private float speedBonusTimeCount;
+    private int numberOfObstacle;
     float timeInGame = 0;
     Profile profile;
     bool isStart;
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
 
         playerSpeed = PLAYER_BASE_SPEED;
         speedBonusTimeCount = 0;
+        numberOfObstacle = 0;
         playerHealth = PLAYER_MAX_HEALTH;
         healthSlider.maxValue = PLAYER_MAX_HEALTH;
         maxX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0)).x;
@@ -114,12 +116,9 @@ public class GameManager : MonoBehaviour
         {
             // obstacle spawn
             obsSpawnTimeCount -= Time.deltaTime;
-            if (obsSpawnTimeCount < 0)
+            if (obsSpawnTimeCount < 0 && numberOfObstacle <= profile.maxObstacle)
             {
-                for (int i = 0; i < profile.maxObstacle; i++)
-                {
-                    SpawnRandomObstacle();
-                }
+                SpawnRandomObstacle();
                 obsSpawnTimeCount = Random.Range(profile.obsSpawnTimeMin, profile.obsSpawnTimeMax);
                 score += profile.obstacleScore;
             }
@@ -217,12 +216,15 @@ public class GameManager : MonoBehaviour
     public float GetPlayerSpeed() { return playerSpeed; }
     public void SetPlayerSpeed(float speed) { playerSpeed = speed; }
     public Profile GetProfile() { return profile; }
+    public void IncreaseNumberOfObstacle() { ++numberOfObstacle; }
+    public void DecreaseNumberOfObstacle() { --numberOfObstacle; }
     private void SpawnRandomObstacle()
     {
         float spawnPosY = maxY + 1f;
         float spawnPosX = Random.Range(-maxX, maxX);
         int randomObsIdx = Random.Range(0, obstacles.Length);
         Instantiate(obstacles[randomObsIdx], new Vector3(spawnPosX, spawnPosY), Quaternion.identity);
+        IncreaseNumberOfObstacle();
     }
 
     private void SpawnRandomBonus()
