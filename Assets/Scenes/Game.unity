@@ -1281,6 +1281,26 @@ PrefabInstance:
       propertyPath: SpeedUpTimeText
       value: 
       objectReference: {fileID: 861028397}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].reachTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[0].bonusSpawnTimeMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMax
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091379037612458979, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
+      propertyPath: DIFFICULTY_PROFILE.Array.data[1].bonusSpawnTimeMin
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4091379037612458980, guid: a29c73dd35532c049a4136576c2a716e, type: 3}
       propertyPath: m_RootOrder
       value: 0

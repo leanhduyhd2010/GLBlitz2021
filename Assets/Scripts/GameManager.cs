@@ -7,6 +7,19 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [System.Serializable]
+    public struct Profile
+    {
+        public string name;
+        public int reachTime;
+        public int maxObstacle;
+        public int obstacleScore;
+        public float obsSpawnTimeMin;
+        public float obsSpawnTimeMax;
+        public float bonusSpawnTimeMin;
+        public float bonusSpawnTimeMax;
+    }
+
     public static GameManager instance;
 
     public GameObject[] obstacles;
@@ -31,15 +44,9 @@ public class GameManager : MonoBehaviour
     public float SPEED_BONUS_MULTIPLIER = 2;
     public float SPEED_BONUS_TIME = 5f;
 
-    public float MIN_TIME_TO_SPAWN_OBSTACLE = 0.2f;
-    public float MAX_TIME_TO_SPAWN_OBSTACLE = 1f;
-    public float MIN_TIME_TO_SPAWN_BONUS = 15f;
-    public float MAX_TIME_TO_SPAWN_BONUS = 25f;
-
     public float PLAYER_MAX_HEALTH = 100f;
-    public int TIME_DIFFICULTY_01 = 30;
-    public int TIME_DIFFICULTY_02 = 60;
-    public int TIME_DIFFICULTY_03 = 120;
+
+    public Profile[] DIFFICULTY_PROFILE;
 
     //////////////////////////
 
@@ -49,7 +56,6 @@ public class GameManager : MonoBehaviour
     private float playerHealth;
     private float maxY;
     private float maxX;
-    private float obsSpawnTime;
     private float obsSpawnTimeCount;
     private float bonusSpawnTimeCount;
     private float speedBonusTimeCount;
@@ -57,8 +63,9 @@ public class GameManager : MonoBehaviour
     float timeToHideHealthEffect = 0;
     float timeToHideSpeedupEffect = 0;
     float timeInGame = 0;
-    int difficulty = 0;
+    Profile profile;
     bool isStart;
+
     private void Start()
     {
         if (instance == null)
@@ -66,14 +73,14 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         else Destroy(instance);
+        profile = DIFFICULTY_PROFILE[0];
 
-        bonusSpawnTimeCount = Random.Range(MIN_TIME_TO_SPAWN_BONUS, MAX_TIME_TO_SPAWN_BONUS);
+        obsSpawnTimeCount = Random.Range(profile.obsSpawnTimeMin, profile.obsSpawnTimeMax);
+        bonusSpawnTimeCount = Random.Range(profile.bonusSpawnTimeMin, profile.bonusSpawnTimeMax);
         high_score = PlayerPrefs.GetInt("game_max_score", 0);
 
         playerSpeed = PLAYER_BASE_SPEED;
         speedBonusTimeCount = 0;
-        obsSpawnTime = MAX_TIME_TO_SPAWN_OBSTACLE;
-        obsSpawnTimeCount = MAX_TIME_TO_SPAWN_OBSTACLE;
         playerHealth = PLAYER_MAX_HEALTH;
         healthSlider.maxValue = PLAYER_MAX_HEALTH;
         maxX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0)).x;
@@ -81,7 +88,6 @@ public class GameManager : MonoBehaviour
         Instruction.SetActive(true);
         isStart = false;
         timeInGame = 0f;
-        difficulty = 1;
     }
 
     private void Update()
@@ -112,29 +118,20 @@ public class GameManager : MonoBehaviour
             obsSpawnTimeCount -= Time.deltaTime;
             if (obsSpawnTimeCount < 0)
             {
-                for (int i = 0; i < difficulty; i++)
+                for (int i = 0; i < profile.maxObstacle; i++)
                 {
                     SpawnRandomObstacle();
                 }
-                obsSpawnTimeCount = obsSpawnTime;
-                ++score;
+                obsSpawnTimeCount = Random.Range(profile.obsSpawnTimeMin, profile.obsSpawnTimeMax);
+                score += profile.obstacleScore;
             }
-            if (obsSpawnTime > MIN_TIME_TO_SPAWN_OBSTACLE)
-            {
-                obsSpawnTime -= Time.deltaTime / 100;
-            }
-            else
-            {
-                obsSpawnTime = MIN_TIME_TO_SPAWN_OBSTACLE;
-            }
-
 
             // bonus spawn
             bonusSpawnTimeCount -= Time.deltaTime;
             if (bonusSpawnTimeCount < 0)
             {
                 SpawnRandomBonus();
-                bonusSpawnTimeCount = Random.Range(MIN_TIME_TO_SPAWN_BONUS, MAX_TIME_TO_SPAWN_BONUS);
+                bonusSpawnTimeCount = Random.Range(profile.bonusSpawnTimeMin, profile.bonusSpawnTimeMax);
             }
 
             // bonus power
@@ -227,7 +224,7 @@ public class GameManager : MonoBehaviour
     public void SetHealth(float health) { playerHealth = health; }
     public int GetScore() { return score; }
     public void SetScore(int _score) { score = _score; }
-    public float GetObstacleSpawnTime() { return obsSpawnTime; }
+    public float GetObstacleSpawnTime() { return profile.obsSpawnTimeMin; }
     public float GetWorldScreenSizeX() { return maxX; }
     public float GetWorldScreenSizeY() { return maxY; }
     public float GetSpeedBonusTime() { return speedBonusTimeCount; }
@@ -257,13 +254,10 @@ public class GameManager : MonoBehaviour
     {
         timeInGame += Time.deltaTime;
 
-        if (timeInGame > TIME_DIFFICULTY_01)
-            difficulty = 2;
-
-        if (timeInGame > TIME_DIFFICULTY_02)
-            difficulty = 3;
-
-        if (timeInGame > TIME_DIFFICULTY_03)
-            difficulty = 4;
+        for (int i = 0; i < DIFFICULTY_PROFILE.Length; i++)
+        {
+            if (timeInGame > DIFFICULTY_PROFILE[i].reachTime)
+                profile = DIFFICULTY_PROFILE[i];
+        }
     }
 }

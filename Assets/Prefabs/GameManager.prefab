@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 2150713507977731920, guid: 68db836a4560d424e888804b43f90449, type: 3}
   healthSlider: {fileID: 0}
   buttonArea: {fileID: 0}
+  Instruction: {fileID: 0}
   scoreText: {fileID: 0}
   highScoreText: {fileID: 0}
   scoreTxt: {fileID: 0}
@@ -61,14 +62,25 @@ MonoBehaviour:
   HealthScoreText: {fileID: 0}
   SpeedUpTimeText: {fileID: 0}
   PLAYER_BASE_SPEED: 100
-  MIN_PLAYER_ROTATION: -45
-  MAX_PLAYER_ROTATION: 45
   BONUS_SCORE: 5
   BONUS_HEALTH: 10
   SPEED_BONUS_MULTIPLIER: 2
   SPEED_BONUS_TIME: 5
-  MIN_TIME_TO_SPAWN_OBSTACLE: 0.2
-  MAX_TIME_TO_SPAWN_OBSTACLE: 1
-  MIN_TIME_TO_SPAWN_BONUS: 5
-  MAX_TIME_TO_SPAWN_BONUS: 10
   PLAYER_MAX_HEALTH: 100
+  DIFFICULTY_PROFILE:
+  - name: default
+    reachTime: 0
+    maxObstacle: 1
+    obstacleScore: 5
+    obsSpawnTimeMin: 1.5
+    obsSpawnTimeMax: 2
+    bonusSpawnTimeMin: 3
+    bonusSpawnTimeMax: 5
+  - name: hard
+    reachTime: 10
+    maxObstacle: 2
+    obstacleScore: 10
+    obsSpawnTimeMin: 1.5
+    obsSpawnTimeMax: 2.5
+    bonusSpawnTimeMin: 4.5
+    bonusSpawnTimeMax: 6.1
